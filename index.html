@@ -119,7 +119,8 @@ header p{color:rgba(245,240,232,.52);font-size:13px;font-weight:300;max-width:52
 
 <div class="tabs">
   <button class="tab active" onclick="switchTab('eco',this)">🏛️ Ecosystems</button>
-  <button class="tab" onclick="switchTab('ev',this)">📅 Events 2026</button>
+  <button class="tab" onclick="switchTab('ev',this)">📅 Events — LATAM</button>
+  <button class="tab" onclick="switchTab('us',this)">🇺🇸 Events — US</button>
 </div>
 
 <!-- ═══ ECOSYSTEMS ═══ -->
@@ -337,14 +338,14 @@ header p{color:rgba(245,240,232,.52);font-size:13px;font-weight:300;max-width:52
 </div><!-- /container -->
 </div><!-- /eco -->
 
-<!-- ═══ EVENTS ═══ -->
+<!-- ═══ LATAM EVENTS ═══ -->
 <div id="tab-ev" class="sec">
 <div class="container">
 
 <div class="stats">
-  <div class="stat"><div class="stat-n g">11</div><div class="stat-l">Events mapped Apr–Sep 2026</div></div>
-  <div class="stat"><div class="stat-n">3</div><div class="stat-l">Tier-1 events — highest ICP concentration</div></div>
-  <div class="stat"><div class="stat-n a">40K+</div><div class="stat-l">Combined potential attendees in the period</div></div>
+  <div class="stat"><div class="stat-n g">14</div><div class="stat-l">Events mapped Apr–Oct 2026</div></div>
+  <div class="stat"><div class="stat-n">5</div><div class="stat-l">Tier-1 events — highest ICP concentration</div></div>
+  <div class="stat"><div class="stat-n a">55K+</div><div class="stat-l">Combined potential attendees in the period</div></div>
   <div class="stat"><div class="stat-n g">6</div><div class="stat-l">Countries with a relevant event in the period</div></div>
 </div>
 
@@ -353,6 +354,7 @@ header p{color:rgba(245,240,232,.52);font-size:13px;font-weight:300;max-width:52
   <div class="tli"><div class="tlb" style="background:var(--green)"></div>Tier 1 — Must attend</div>
   <div class="tli"><div class="tlb" style="background:var(--amber)"></div>Tier 2 — High priority</div>
   <div class="tli"><div class="tlb" style="background:#93C5FD"></div>Tier 3 — Track &amp; follow</div>
+  <span style="font-size:10.5px;color:var(--ink-light);margin-left:8px">· Sorted by tier, then by date within each tier</span>
 </div>
 
 <div class="efbox">
@@ -378,22 +380,21 @@ header p{color:rgba(245,240,232,.52);font-size:13px;font-weight:300;max-width:52
     </div>
   </div>
 </div>
-<div class="rm" id="evCount">Showing 11 events</div>
+<div class="rm" id="evCount">Showing 14 events</div>
 
 <div class="ecards" id="evGrid">
 
-  <!-- MAY -->
-  <div class="ecard" data-m="may" data-co="CL LATAM">
+  <!-- ══ TIER 1 ══ -->
+  <div class="ecard" data-m="may" data-co="CL LATAM" data-tier="1">
     <div class="estripe es1"></div>
     <div class="eh"><div class="et">Chile Fintech Forum 2026</div><span class="edb dm">May 6–7 · Santiago</span></div>
     <div class="emeta"><div class="emi">📍 Espacio Riesco, Santiago, CL</div><div class="emi">👥 3,000+ attendees</div><div class="emi">🏆 Chile's largest fintech event</div></div>
     <div class="ect"><span class="ctag">CL</span><span class="ctag r">LATAM reference</span></div>
-    <div class="edesc">Chile's largest fintech event and a LATAM regional reference. Organized by FinteChile. Attended by startups, banks, investors, regulators and tech companies. 4th edition — projected as the most global yet. Key themes: AI, Open Finance under the new Fintech Law, digital payments, stablecoins. <strong>Ideal given Tomás is based in Santiago.</strong></div>
+    <div class="edesc">Chile's largest fintech event and LATAM regional reference. Organized by FinteChile. 4th edition — projected as the most global yet. Key themes: AI, Open Finance under the new Fintech Law, digital payments, stablecoins. <strong>Ideal given Tomás is based in Santiago and Anthropic already has a connection with FinteChile.</strong></div>
     <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
-      <div class="eopp"><span>🥇</span>Sponsor as Gold/Silver — booth in the Expo Hall and visibility in the agenda. Download brochure at chilefintechforum.com</div>
+      <div class="eopp"><span>🥇</span>Sponsor as Gold/Silver — booth in Expo Hall + visibility in the agenda. Download brochure at chilefintechforum.com</div>
       <div class="eopp"><span>🎤</span>Propose speaker: "How LATAM fintechs are using stablecoins for US-LATAM payments"</div>
-      <div class="eopp"><span>🤝</span>Activate FinteChile relationship ahead of the event — existing Anthropic Chile connection helps</div>
-      <div class="eopp"><span>📸</span>Generate intensive LinkedIn and X content both days — high ecosystem engagement during the event</div>
+      <div class="eopp"><span>🤝</span>Activate FinteChile relationship ahead of event — existing Anthropic Chile connection</div>
     </div>
     <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
       <span class="epill ep1">Tier 1 · Must attend</span>
@@ -401,12 +402,12 @@ header p{color:rgba(245,240,232,.52);font-size:13px;font-weight:300;max-width:52
     </div>
   </div>
 
-  <div class="ecard" data-m="may" data-co="PE LATAM">
+  <div class="ecard" data-m="may" data-co="PE LATAM" data-tier="1">
     <div class="estripe es1"></div>
     <div class="eh"><div class="et">iupanaDay 2026</div><span class="edb dm">May 7 · Lima, PE</span></div>
     <div class="emeta"><div class="emi">📍 Lima, Peru</div><div class="emi">👥 150 C-level leaders</div><div class="emi">🔒 Closed / by invitation</div></div>
     <div class="ect"><span class="ctag">PE</span><span class="ctag r">Regional LATAM</span></div>
-    <div class="edesc">Exclusive digital banking forum organized by iupana. Second edition (the first was in Bogotá). 150 C-level executives from banks, fintechs and payments companies across LATAM. Themes: data, AI, open payments and quantum computing. Plenary sessions, workshops and curated networking. One of the most selective and high-quality events of the year.</div>
+    <div class="edesc">Exclusive digital banking forum by iupana. 150 C-level executives from banks, fintechs and payments companies across LATAM. Themes: data, AI, open payments. One of the most selective and high-quality events of the year.</div>
     <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
       <div class="eopp"><span>🤝</span>Sponsor — contact Luz Castro (luz@iupana.com). Visibility in front of 150 C-levels who are exactly Mural Pay's ICP</div>
       <div class="eopp"><span>🎤</span>Propose Tomás as a speaker on cross-border payments or stablecoin infrastructure</div>
@@ -417,16 +418,16 @@ header p{color:rgba(245,240,232,.52);font-size:13px;font-weight:300;max-width:52
     </div>
   </div>
 
-  <div class="ecard" data-m="may" data-co="CO LATAM">
+  <div class="ecard" data-m="may" data-co="CO LATAM" data-tier="1">
     <div class="estripe es1"></div>
     <div class="eh"><div class="et">Paytech Conf 2026</div><span class="edb dm">May 29 · Bogotá</span></div>
     <div class="emeta"><div class="emi">📍 Bogotá, Colombia</div><div class="emi">👥 500–800 attendees</div><div class="emi">💳 100% digital payments focus</div></div>
     <div class="ect"><span class="ctag">CO</span><span class="ctag r">Regional LATAM</span></div>
-    <div class="edesc">LATAM's mega digital payments conference, organized by Latam Fintech Hub (Edwin Zácipa). Third edition. Brings together Nubank, Visa, Mastercard, Revolut, processors, neobanks and remittance fintechs. Expo Hall with 50+ exhibitors, academic agenda and networking. <strong>The most directly relevant event for Mural Pay's positioning in the payments chain.</strong></div>
+    <div class="edesc">LATAM's mega digital payments conference, organized by Latam Fintech Hub (Edwin Zácipa). 3rd edition. Brings together Nubank, Visa, Mastercard, Revolut, processors, neobanks and remittance fintechs. Expo Hall with 50+ exhibitors. <strong>The most directly relevant event for Mural Pay's positioning in the payments chain.</strong></div>
     <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
       <div class="eopp"><span>🥇</span>Sponsor — contact Edwin Zácipa (hola@latamfintech.co). High visibility across the entire LATAM payments chain</div>
       <div class="eopp"><span>🎤</span>Propose panel: "Stablecoins as B2B payment infrastructure: the LATAM-US case"</div>
-      <div class="eopp"><span>🤝</span>Schedule 1:1 meetings with CO pipeline prospects at the event: Skopa, Wahayi, Verilo, SitesPay</div>
+      <div class="eopp"><span>🤝</span>Schedule 1:1s with CO pipeline: Skopa, Wahayi, Verilo, SitesPay</div>
     </div>
     <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
       <span class="epill ep1">Tier 1 · Must attend</span>
@@ -434,31 +435,83 @@ header p{color:rgba(245,240,232,.52);font-size:13px;font-weight:300;max-width:52
     </div>
   </div>
 
-  <div class="ecard" data-m="may" data-co="MX LATAM">
-    <div class="estripe es3"></div>
-    <div class="eh"><div class="et">FTMX Week 2026</div><span class="edb dm">May/Jun · Mexico City</span></div>
-    <div class="emeta"><div class="emi">📍 Mexico City</div><div class="emi">📅 Week of distributed events</div><div class="emi">🏛️ Asociación FinTech México</div></div>
-    <div class="ect"><span class="ctag">MX</span></div>
-    <div class="edesc">A week of decentralized events organized by FinTech México across CDMX, connecting founders, investors, regulators and tech companies. The FinTech México Festival 2026 (Feb 26, 3,000+ attendees) is the flagship event — additional cycles run throughout the year.</div>
+  <div class="ecard" data-m="jun" data-co="MX LATAM" data-tier="1">
+    <div class="estripe es1"></div>
+    <div class="eh"><div class="et">Stablecoin Conference LATAM 2026</div><span class="edb dj">Jun 15–16 · Mexico City</span></div>
+    <div class="emeta"><div class="emi">📍 WTC Mexico City</div><div class="emi">👥 2,500 attendees · 50%+ C-level</div><div class="emi">🔑 100% stablecoin focus</div></div>
+    <div class="ect"><span class="ctag">MX</span><span class="ctag r">Regional LATAM</span></div>
+    <div class="edesc">The only LATAM event dedicated 100% to stablecoins. Organized by Bitso. 100+ speakers, 800+ companies, 50+ countries. Speakers: Daniel Vogel (Bitso CEO), Paxos, Circle, Ripple, Tether, Solana Foundation, Mastercard, Fireblocks. Topics: payments, regulation, global transfers, TradFi-DeFi convergence. <strong>The single most on-brand event for Mural Pay in the entire 2026 calendar.</strong></div>
     <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
-      <div class="eopp"><span>🎤</span>Propose a satellite event or talk on stablecoin cross-border payments within the week</div>
-      <div class="eopp"><span>🤝</span>Network with MX pipeline fintechs ahead of FINNOSUMMIT in September</div>
+      <div class="eopp"><span>🥇</span>Sponsor — contact via stablecoinconferencelatam.com/sponsors. The room is exactly Mural Pay's target buyer</div>
+      <div class="eopp"><span>🎤</span>Apply as speaker: "Stablecoin-native payment rails for B2B LATAM-US corridors" — perfectly on-theme</div>
+      <div class="eopp"><span>🤝</span>Use the 2-day format to run a dense 1:1 schedule with prospects from the entire region</div>
     </div>
     <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
-      <span class="epill ep3">Tier 3 · Track</span>
-      <a class="elink" href="https://fintechmexico.org/eventos" target="_blank">fintechmexico.org →</a>
+      <span class="epill ep1">Tier 1 · Must attend</span>
+      <a class="elink" href="https://stablecoinconferencelatam.com" target="_blank">stablecoinconferencelatam.com →</a>
     </div>
   </div>
 
-  <!-- JUNE -->
-  <div class="ecard" data-m="jun" data-co="MX LATAM">
+  <div class="ecard" data-m="sep" data-co="MX LATAM" data-tier="1">
+    <div class="estripe es1"></div>
+    <div class="eh"><div class="et">FINNOSUMMIT 2026</div><span class="edb ds">Sep 23–24 · Mexico City</span></div>
+    <div class="emeta"><div class="emi">📍 Expo Santa Fe, CDMX</div><div class="emi">👥 3,000+ expected</div><div class="emi">🏆 10th edition · LATAM's largest</div></div>
+    <div class="ect"><span class="ctag">MX</span><span class="ctag r">Regional LATAM</span></div>
+    <div class="edesc">The 10th edition of LATAM's largest fintech event by Finnovista. Theme 2026: convergence of the real economy and finance. <strong>Stablecoins and payments are central pillars</strong> — Paxos already confirmed as speaker. The highest-visibility moment of the year in the region.</div>
+    <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
+      <div class="eopp"><span>🥇</span>Sponsor — this is the H2 closing event. Presence here consolidates the full year's positioning</div>
+      <div class="eopp"><span>🎤</span>Apply to Content Advisory Board as a speaker — stablecoins + B2B payments already on the agenda</div>
+      <div class="eopp"><span>📸</span>Generate intensive social content both days — biggest visibility moment of the year in LATAM</div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
+      <span class="epill ep1">Tier 1 · Must attend</span>
+      <a class="elink" href="https://finnosummit.com" target="_blank">finnosummit.com →</a>
+    </div>
+  </div>
+
+  <div class="ecard" data-m="sep" data-co="CO LATAM" data-tier="1">
+    <div class="estripe es1"></div>
+    <div class="eh"><div class="et">Latam Fintech Market 2026</div><span class="edb ds">Sep · Barranquilla, CO</span></div>
+    <div class="emeta"><div class="emi">📍 Barranquilla, Colombia</div><div class="emi">👥 1,300+ attendees</div><div class="emi">🗓️ 2 days · Market format</div></div>
+    <div class="ect"><span class="ctag">CO</span><span class="ctag r">Regional LATAM</span></div>
+    <div class="edesc">Colombia's most important digital financial technology event and one of LATAM's top conferences. Organized by Colombia Fintech. In 2025: AI, instant payments (Bre-B) and stablecoins were the main themes. (Exact 2026 date TBC, historically September.)</div>
+    <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
+      <div class="eopp"><span>🥇</span>Sponsor — home event in Mural Pay's most active market. Very convenient given Tomás's regional presence</div>
+      <div class="eopp"><span>🎤</span>Propose panel on cross-border payment infrastructure CO-US using stablecoins</div>
+      <div class="eopp"><span>🤝</span>Schedule 1:1s with CO pipeline: Skopa, Wahayi, Verilo, SitesPay</div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
+      <span class="epill ep1">Tier 1 · Must attend</span>
+      <a class="elink" href="https://latamfintech.market" target="_blank">latamfintech.market →</a>
+    </div>
+  </div>
+
+  <!-- ══ TIER 2 ══ -->
+  <div class="ecard" data-m="may" data-co="LATAM" data-tier="2">
+    <div class="estripe es2"></div>
+    <div class="eh"><div class="et">CrossTech Fintech Fest 2026</div><span class="edb dm">May 19–20 · Miami</span></div>
+    <div class="emeta"><div class="emi">📍 Miami Ironside, FL</div><div class="emi">👥 500+ operators & founders</div><div class="emi">💸 Cross-border payments focus</div></div>
+    <div class="ect"><span class="ctag r">LATAM-US corridor</span></div>
+    <div class="edesc">The reference conference for the cross-border payments and remittances industry, by CrossTech (ex-IMTC). 500+ operators, banks, MTOs and fintech founders who move money for a living. Day 2 includes a dedicated Stablecoins for Financial Services course. Sessions cover stablecoins in the LATAM-US corridor, MSB banking and distribution specifically.</div>
+    <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
+      <div class="eopp"><span>🥇</span>Sponsor — room is entirely composed of companies who would use Mural Pay's rails daily</div>
+      <div class="eopp"><span>🎤</span>Propose speaker on "Stablecoins in the LATAM-US Corridor" — exactly on the agenda already</div>
+      <div class="eopp"><span>🤝</span>High-density 1:1 networking with MTOs, neobanks and remittance fintechs</div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
+      <span class="epill ep2">Tier 2 · High priority</span>
+      <a class="elink" href="https://crosstechpayments.com/fintech-fest-2026" target="_blank">crosstechpayments.com →</a>
+    </div>
+  </div>
+
+  <div class="ecard" data-m="jun" data-co="MX LATAM" data-tier="2">
     <div class="estripe es2"></div>
     <div class="eh"><div class="et">FINNOSUMMIT Connect 2026</div><span class="edb dj">Jun · Cancún, MX</span></div>
     <div class="emeta"><div class="emi">📍 Cancún, Mexico</div><div class="emi">👥 200–400 leaders</div><div class="emi">🔒 Exclusive C-level format</div></div>
     <div class="ect"><span class="ctag">MX</span><span class="ctag r">Regional LATAM</span></div>
-    <div class="edesc">Finnovista's most exclusive event: brings together top C-suite from fintech and financial institutions across LATAM in an intimate, high-level format. Roundtables and curated networking sessions. Ideal for building relationships with CEOs and decision-makers. (Exact date TBC, historically March–June.)</div>
+    <div class="edesc">Finnovista's most exclusive event: brings together C-suite from fintech and financial institutions across LATAM in an intimate roundtable format. Ideal for building relationships with CEOs and decision-makers. (Exact date TBC, historically June.)</div>
     <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
-      <div class="eopp"><span>🎯</span>Secure an invitation as speaker or sponsor — contact Finnovista directly</div>
+      <div class="eopp"><span>🎯</span>Secure invitation as speaker or sponsor — contact Finnovista directly</div>
       <div class="eopp"><span>🤝</span>Intimate format ideal for 1:1 meetings with MX and CO pipeline fintechs</div>
     </div>
     <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
@@ -467,13 +520,12 @@ header p{color:rgba(245,240,232,.52);font-size:13px;font-weight:300;max-width:52
     </div>
   </div>
 
-  <!-- AUGUST -->
-  <div class="ecard" data-m="aug" data-co="MX LATAM">
+  <div class="ecard" data-m="aug" data-co="MX LATAM" data-tier="2">
     <div class="estripe es2"></div>
     <div class="eh"><div class="et">Fintech Summit Americas 2026</div><span class="edb da">Aug · Mexico City</span></div>
     <div class="emeta"><div class="emi">📍 Mexico City</div><div class="emi">👥 750+ attendees</div><div class="emi">🗓️ 17th edition</div></div>
     <div class="ect"><span class="ctag">MX</span><span class="ctag r">Regional LATAM</span></div>
-    <div class="edesc">17 years of history. The reference event for the evolution of the digital financial economy in LATAM. 2026 themes: financial infrastructure driving sector growth, and AI in financial services. Expo Hall with 1:1 matchmaking via Swapcard. 750+ in-person and virtual attendees. (Exact date TBC, historically August.)</div>
+    <div class="edesc">17 years of history. Reference event for the digital financial economy in LATAM. 2026 themes: financial infrastructure and AI in financial services. Expo Hall with Swapcard 1:1 matchmaking. (Exact date TBC, historically August.)</div>
     <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
       <div class="eopp"><span>🏗️</span>Participate in the financial infrastructure track — ideal positioning for Mural Pay as stablecoin "rails"</div>
       <div class="eopp"><span>🤝</span>Use Swapcard to pre-schedule 1:1 meetings with MX pipeline fintechs</div>
@@ -484,51 +536,15 @@ header p{color:rgba(245,240,232,.52);font-size:13px;font-weight:300;max-width:52
     </div>
   </div>
 
-  <!-- SEPTEMBER -->
-  <div class="ecard" data-m="sep" data-co="MX LATAM">
-    <div class="estripe es1"></div>
-    <div class="eh"><div class="et">FINNOSUMMIT 2026</div><span class="edb ds">Sep 23–24 · Mexico City</span></div>
-    <div class="emeta"><div class="emi">📍 Expo Santa Fe, CDMX</div><div class="emi">👥 3,000+ expected</div><div class="emi">🏆 10th edition · LATAM's largest</div></div>
-    <div class="ect"><span class="ctag">MX</span><span class="ctag r">Regional LATAM</span></div>
-    <div class="edesc">The 10th edition of LATAM's largest fintech event. Theme 2026: convergence of the real economy and finance (retail, health, logistics + fintech). <strong>Stablecoins and payments are central pillars</strong> — Paxos already confirmed as speaker. The Cámara Argentina Fintech is organizing a special commercial mission for this event. The single biggest visibility moment of the year in the region.</div>
-    <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
-      <div class="eopp"><span>🥇</span>Sponsor — this is the H2 closing event. Presence here consolidates the full year's positioning</div>
-      <div class="eopp"><span>🎤</span>Apply to the Content Advisory Board as a speaker — stablecoins + B2B payments already on the agenda</div>
-      <div class="eopp"><span>🤝</span>Leverage the Argentina Commercial Mission to connect with AR fintechs attending the event</div>
-      <div class="eopp"><span>📸</span>Generate intensive social content both days — the highest-visibility moment of the year in LATAM</div>
-    </div>
-    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
-      <span class="epill ep1">Tier 1 · Must attend</span>
-      <a class="elink" href="https://finnosummit.com" target="_blank">finnosummit.com →</a>
-    </div>
-  </div>
-
-  <div class="ecard" data-m="sep" data-co="CO LATAM">
-    <div class="estripe es1"></div>
-    <div class="eh"><div class="et">Latam Fintech Market 2026</div><span class="edb ds">Sep · Barranquilla, CO</span></div>
-    <div class="emeta"><div class="emi">📍 Barranquilla, Colombia</div><div class="emi">👥 1,300+ attendees</div><div class="emi">🗓️ 2 days · Market format</div></div>
-    <div class="ect"><span class="ctag">CO</span><span class="ctag r">Regional LATAM</span></div>
-    <div class="edesc">Colombia's most important digital financial technology event and one of LATAM's top conferences. Organized by Colombia Fintech. Two days of academic agenda, commercial matchmaking and networking. In 2025: AI, instant payments (Bre-B) and stablecoins were the main themes. (Exact 2026 date TBC, historically September.)</div>
-    <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
-      <div class="eopp"><span>🥇</span>Sponsor — home event in Mural Pay's most active market. Very convenient given Tomás's presence in the region</div>
-      <div class="eopp"><span>🎤</span>Propose panel on cross-border payment infrastructure CO-US using stablecoins</div>
-      <div class="eopp"><span>🤝</span>Schedule 1:1 meetings with CO pipeline: Skopa, Wahayi, Verilo, SitesPay</div>
-    </div>
-    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
-      <span class="epill ep1">Tier 1 · Must attend</span>
-      <a class="elink" href="https://latamfintech.market" target="_blank">latamfintech.market →</a>
-    </div>
-  </div>
-
-  <div class="ecard" data-m="sep" data-co="AR LATAM">
+  <div class="ecard" data-m="sep" data-co="AR LATAM" data-tier="2">
     <div class="estripe es2"></div>
     <div class="eh"><div class="et">Argentina Fintech Forum 2026</div><span class="edb ds">Sep/Oct · Buenos Aires</span></div>
     <div class="emeta"><div class="emi">📍 Buenos Aires, Argentina</div><div class="emi">👥 500+ attendees</div><div class="emi">🗓️ ~7th edition</div></div>
     <div class="ect"><span class="ctag">AR</span></div>
-    <div class="edesc">The flagship event of Cámara Argentina Fintech. The 6th edition (2024) included the CNV president and brought together the full local ecosystem. The AR market has 700+ fintechs with accelerated stablecoin adoption driven by monetary volatility — genuine demand for AR-US corridors. (Exact 2026 date TBC, historically October.)</div>
+    <div class="edesc">Flagship event of Cámara Argentina Fintech. The AR market has 700+ fintechs with accelerated stablecoin adoption driven by monetary volatility — genuine demand for AR-US corridors. (Exact 2026 date TBC, historically October.)</div>
     <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
       <div class="eopp"><span>🤝</span>Sponsor — market with high stablecoin adoption and urgent need for AR-US corridors</div>
-      <div class="eopp"><span>🎤</span>Propose a panel on stablecoin payments for fintechs operating in high-inflation markets</div>
+      <div class="eopp"><span>🎤</span>Propose a panel on stablecoin payments for fintechs in high-inflation markets</div>
     </div>
     <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
       <span class="epill ep2">Tier 2 · High priority</span>
@@ -536,27 +552,12 @@ header p{color:rgba(245,240,232,.52);font-size:13px;font-weight:300;max-width:52
     </div>
   </div>
 
-  <div class="ecard" data-m="sep" data-co="AR LATAM">
-    <div class="estripe es3"></div>
-    <div class="eh"><div class="et">CLAB 2026 (FELABAN)</div><span class="edb ds">Sep · Buenos Aires, AR</span></div>
-    <div class="emeta"><div class="emi">📍 Buenos Aires, Argentina</div><div class="emi">👥 1,000+ attendees</div><div class="emi">🏦 Banking + Fintech</div></div>
-    <div class="ect"><span class="ctag">AR</span><span class="ctag r">Regional LATAM</span></div>
-    <div class="edesc">Latin American and Caribbean Banks Congress (FELABAN). Traditional banks and fintechs converge. In 2025, it addressed predictive banking, invisible finance and core system modernization. Relevant for positioning Mural Pay before institutional players and large-scale fintechs seeking cross-border payment solutions.</div>
-    <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
-      <div class="eopp"><span>👀</span>Attend to map potential institutional clients and strategic partnerships</div>
-      <div class="eopp"><span>🤝</span>Use as networking follow-up after FINNOSUMMIT before this event</div>
-    </div>
-    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
-      <span class="epill ep3">Tier 3 · Track</span>
-    </div>
-  </div>
-
-  <div class="ecard" data-m="oct" data-co="PE LATAM">
+  <div class="ecard" data-m="oct" data-co="PE LATAM" data-tier="2">
     <div class="estripe es2"></div>
     <div class="eh"><div class="et">Perú Fintech Forum 2026</div><span class="edb dp">Oct/Nov · Lima, PE</span></div>
     <div class="emeta"><div class="emi">📍 Lima, Peru</div><div class="emi">👥 400–600 attendees</div><div class="emi">🏛️ Organized by FinTech Perú</div></div>
     <div class="ect"><span class="ctag">PE</span><span class="ctag">BO</span></div>
-    <div class="edesc">The annual event of the FinTech Perú trade association. Brings together Peruvian and regional fintechs, regulators (SBS, BCRP) and investors. In 2024, Perú Crypto &amp; Digital Assets was also held alongside it, reflecting growing interest in digital assets. Natural entry point for the Bolivian market, which has no dedicated local event. (Exact date TBC.)</div>
+    <div class="edesc">Annual event of FinTech Perú. Brings together Peruvian and regional fintechs, regulators (SBS, BCRP) and investors. Natural entry point for the Bolivian market, which has no dedicated local event. (Exact date TBC.)</div>
     <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
       <div class="eopp"><span>🤝</span>Sponsor — position Mural Pay in the Peru/Bolivia-US stablecoin corridor</div>
       <div class="eopp"><span>🎤</span>Speak on international payment infrastructure for fintechs in emerging markets</div>
@@ -564,6 +565,38 @@ header p{color:rgba(245,240,232,.52);font-size:13px;font-weight:300;max-width:52
     <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
       <span class="epill ep2">Tier 2 · High priority</span>
       <a class="elink" href="https://fintechperu.com" target="_blank">fintechperu.com →</a>
+    </div>
+  </div>
+
+  <!-- ══ TIER 3 ══ -->
+  <div class="ecard" data-m="may" data-co="MX LATAM" data-tier="3">
+    <div class="estripe es3"></div>
+    <div class="eh"><div class="et">FTMX Week 2026</div><span class="edb dm">May/Jun · Mexico City</span></div>
+    <div class="emeta"><div class="emi">📍 Mexico City</div><div class="emi">📅 Week of distributed events</div><div class="emi">🏛️ Asociación FinTech México</div></div>
+    <div class="ect"><span class="ctag">MX</span></div>
+    <div class="edesc">Week of decentralized events by FinTech México across CDMX, connecting founders, investors, regulators and tech companies. Good warm-up for the September FINNOSUMMIT cycle.</div>
+    <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
+      <div class="eopp"><span>🎤</span>Propose a satellite event or talk on stablecoin cross-border payments</div>
+      <div class="eopp"><span>🤝</span>Network with MX pipeline fintechs ahead of FINNOSUMMIT in September</div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
+      <span class="epill ep3">Tier 3 · Track</span>
+      <a class="elink" href="https://fintechmexico.org/eventos" target="_blank">fintechmexico.org →</a>
+    </div>
+  </div>
+
+  <div class="ecard" data-m="sep" data-co="AR LATAM" data-tier="3">
+    <div class="estripe es3"></div>
+    <div class="eh"><div class="et">CLAB 2026 (FELABAN)</div><span class="edb ds">Sep · Buenos Aires, AR</span></div>
+    <div class="emeta"><div class="emi">📍 Buenos Aires, Argentina</div><div class="emi">👥 1,000+ attendees</div><div class="emi">🏦 Banking + Fintech</div></div>
+    <div class="ect"><span class="ctag">AR</span><span class="ctag r">Regional LATAM</span></div>
+    <div class="edesc">Latin American and Caribbean Banks Congress (FELABAN). Traditional banks and fintechs converge. In 2025: predictive banking, invisible finance and core modernization. Relevant for positioning Mural Pay before institutional players.</div>
+    <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
+      <div class="eopp"><span>👀</span>Attend to map potential institutional clients and strategic partnerships</div>
+      <div class="eopp"><span>🤝</span>Use as networking follow-up after FINNOSUMMIT</div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
+      <span class="epill ep3">Tier 3 · Track</span>
     </div>
   </div>
 
@@ -577,8 +610,163 @@ header p{color:rgba(245,240,232,.52);font-size:13px;font-weight:300;max-width:52
 </div><!-- /container -->
 </div><!-- /ev -->
 
+<!-- ═══ US EVENTS ═══ -->
+<div id="tab-us" class="sec">
+<div class="container">
+
+<div class="stats">
+  <div class="stat"><div class="stat-n g">7</div><div class="stat-l">US events mapped May–Oct 2026</div></div>
+  <div class="stat"><div class="stat-n">2</div><div class="stat-l">Tier-1 events for US positioning</div></div>
+  <div class="stat"><div class="stat-n a">30K+</div><div class="stat-l">Combined attendees — highest density of US fintech buyers</div></div>
+  <div class="stat"><div class="stat-n g">3</div><div class="stat-l">Events with explicit stablecoin / cross-border agenda</div></div>
+</div>
+
+<div class="tleg">
+  <span style="font-size:10.5px;font-weight:600;color:var(--ink-light);text-transform:uppercase;letter-spacing:.06em">Relevance:</span>
+  <div class="tli"><div class="tlb" style="background:var(--green)"></div>Tier 1 — Must attend</div>
+  <div class="tli"><div class="tlb" style="background:var(--amber)"></div>Tier 2 — High priority</div>
+  <div class="tli"><div class="tlb" style="background:#93C5FD"></div>Tier 3 — Track &amp; follow</div>
+  <span style="font-size:10.5px;color:var(--ink-light);margin-left:8px">· Sorted by tier, then by date</span>
+</div>
+
+<div class="efbox">
+  <div class="fr" style="margin-bottom:0"><div class="fr-l">Month</div>
+    <div class="filters" id="usMonthF">
+      <button class="fbtn active" onclick="fevus('m','all',this)">All</button>
+      <button class="fbtn" onclick="fevus('m','may',this)">May</button>
+      <button class="fbtn" onclick="fevus('m','sep',this)">September</button>
+      <button class="fbtn" onclick="fevus('m','oct',this)">October</button>
+    </div>
+  </div>
+</div>
+<div class="rm" id="usCount">Showing 7 events</div>
+
+<div class="ecards" id="usGrid">
+
+  <!-- ══ TIER 1 ══ -->
+  <div class="ecard" data-m="sep" data-tier="1">
+    <div class="estripe es1"></div>
+    <div class="eh"><div class="et">Stablecon USA 2026</div><span class="edb ds">Sep 9–11 · Washington, D.C.</span></div>
+    <div class="emeta"><div class="emi">📍 Washington, D.C.</div><div class="emi">👥 Invite-only · Policy + industry leaders</div><div class="emi">🔑 100% stablecoin focus</div></div>
+    <div class="ect"><span class="ctag r">US — Stablecoins</span></div>
+    <div class="edesc">The flagship US stablecoin conference, dedicated to policy, regulation and infrastructure. Brings together current and former policymakers, senior regulators, issuers (Circle, Paxos, Tether), payment providers and enterprise buyers. The GENIUS Act and US stablecoin regulatory framework are the central topics. <strong>Critical for Mural Pay to be visible in the US regulatory and institutional stablecoin conversation.</strong></div>
+    <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
+      <div class="eopp"><span>🎯</span>Apply for invitation or sponsorship at stablecon.com — visibility before the US policy community shaping the stablecoin landscape Mural Pay operates in</div>
+      <div class="eopp"><span>🎤</span>Propose speaker: "How stablecoins are enabling B2B payments for LATAM fintechs" — real-world use case vs theoretical policy</div>
+      <div class="eopp"><span>🤝</span>Build relationships with Circle, Paxos, Stripe Bridge and other infrastructure partners</div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
+      <span class="epill ep1">Tier 1 · Must attend</span>
+      <a class="elink" href="https://stablecon.com" target="_blank">stablecon.com →</a>
+    </div>
+  </div>
+
+  <div class="ecard" data-m="oct" data-tier="1">
+    <div class="estripe es1"></div>
+    <div class="eh"><div class="et">Money20/20 USA 2026</div><span class="edb dp">Oct 18–21 · Las Vegas</span></div>
+    <div class="emeta"><div class="emi">📍 The Venetian, Las Vegas, NV</div><div class="emi">👥 13,000+ attendees · 1 in 3 C-suite</div><div class="emi">🏆 World's largest fintech event</div></div>
+    <div class="ect"><span class="ctag r">US — Global fintech</span></div>
+    <div class="edesc">The world's largest and most influential fintech event. 13,000+ attendees from 85+ countries. In 2025, stablecoins dominated alongside AI — Circle, Citi, Paxos, Western Union (stablecoin launch), Ripple all presented. 2026 will be shaped by GENIUS Act implementation, FedNow cross-border use cases and the collision of open banking with crypto rails. <strong>The single most important deal-making event in global fintech.</strong></div>
+    <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
+      <div class="eopp"><span>🥇</span>Attend and sponsor — where Mural Pay's US distribution partnerships get built (LATAM-focused fintechs attend in force)</div>
+      <div class="eopp"><span>🎤</span>Apply as speaker on stablecoin B2B payments infrastructure for LATAM corridors</div>
+      <div class="eopp"><span>🤝</span>Use SmartMeet to book meetings with Circle, Stripe Bridge, Ripple, Thunes and top LATAM-US fintechs</div>
+      <div class="eopp"><span>📸</span>Generate high-visibility content — every fintech media outlet covers this event live</div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
+      <span class="epill ep1">Tier 1 · Must attend</span>
+      <a class="elink" href="https://us.money2020.com" target="_blank">us.money2020.com →</a>
+    </div>
+  </div>
+
+  <!-- ══ TIER 2 ══ -->
+  <div class="ecard" data-m="may" data-tier="2">
+    <div class="estripe es2"></div>
+    <div class="eh"><div class="et">CrossTech Fintech Fest 2026</div><span class="edb dm">May 19–20 · Miami</span></div>
+    <div class="emeta"><div class="emi">📍 Miami Ironside, FL</div><div class="emi">👥 500+ operators & founders</div><div class="emi">💸 Cross-border payments &amp; stablecoins</div></div>
+    <div class="ect"><span class="ctag r">US — Cross-border &amp; LATAM</span></div>
+    <div class="edesc">The cross-border payments industry's gathering, by CrossTech (ex-IMTC). 500+ operators, banks, MTOs and fintech founders who move money for a living. Day 2 includes a dedicated Stablecoins for Financial Services course. Sessions explicitly cover stablecoins in the LATAM-US corridor and MSB banking.</div>
+    <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
+      <div class="eopp"><span>🥇</span>Sponsor — the room is exactly the companies who use Mural Pay's rails</div>
+      <div class="eopp"><span>🎤</span>Propose speaker on "Stablecoins in the LATAM-US Corridor" — exactly on the agenda</div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
+      <span class="epill ep2">Tier 2 · High priority</span>
+      <a class="elink" href="https://crosstechpayments.com/fintech-fest-2026" target="_blank">crosstechpayments.com →</a>
+    </div>
+  </div>
+
+  <div class="ecard" data-m="may" data-tier="2">
+    <div class="estripe es2"></div>
+    <div class="eh"><div class="et">Fintech Americas Miami 2026</div><span class="edb dp">Mar 24–26 · Miami Beach</span></div>
+    <div class="emeta"><div class="emi">📍 Fontainebleau Miami Beach, FL</div><div class="emi">👥 1,750 leaders</div><div class="emi">🌎 Banking + LATAM focus</div></div>
+    <div class="ect"><span class="ctag r">US — LATAM banking</span></div>
+    <div class="edesc">Now part of the Money20/20 family. Premier gathering of C-level executives from financial institutions across the Americas. Speakers included Nubank Co-Founder Cristina Junqueira, JPMorgan and Meta. Strong LATAM banking and fintech angle — one of the best rooms for Mural Pay's US-based LATAM-focused prospects. (Note: 2026 edition already occurred in March — plan for 2027.)</div>
+    <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
+      <div class="eopp"><span>🤝</span>Strong concentration of LATAM-focused financial executives based in Miami — plan for 2027</div>
+      <div class="eopp"><span>🤝</span>Network with TapTapSend, Remitly and other remittance companies that attend in force</div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
+      <span class="epill ep2">Tier 2 · High priority</span>
+      <a class="elink" href="https://fintechamericas.co" target="_blank">fintechamericas.co →</a>
+    </div>
+  </div>
+
+  <div class="ecard" data-m="may" data-tier="2">
+    <div class="estripe es2"></div>
+    <div class="eh"><div class="et">Nacha Smarter Faster Payments</div><span class="edb dp">Apr 26–29 · San Diego</span></div>
+    <div class="emeta"><div class="emi">📍 San Diego Convention Center, CA</div><div class="emi">👥 1,500+ payments professionals</div><div class="emi">⚡ ACH, RTP, cross-border rails</div></div>
+    <div class="ect"><span class="ctag r">US — Payments infrastructure</span></div>
+    <div class="edesc">Nacha's flagship conference covering ACH, real-time payments, FedNow, cross-border, compliance and fraud. Attended by financial institutions, corporates, fintechs and regulators. The place where the US payments infrastructure community shapes policy and standards. Highly relevant for Mural Pay's compliance and bank-partnership discussions. (Note: 2026 edition already occurred in April — plan for 2027.)</div>
+    <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
+      <div class="eopp"><span>🤝</span>Build relationships with US bank partners, FI compliance teams and payments infrastructure providers</div>
+      <div class="eopp"><span>🎤</span>Propose session on stablecoins as alternative cross-border rails alongside FedNow and ACH</div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
+      <span class="epill ep2">Tier 2 · High priority</span>
+      <a class="elink" href="https://www.nacha.org" target="_blank">nacha.org →</a>
+    </div>
+  </div>
+
+  <!-- ══ TIER 3 ══ -->
+  <div class="ecard" data-m="may" data-tier="3">
+    <div class="estripe es3"></div>
+    <div class="eh"><div class="et">Fintech Meetup 2026</div><span class="edb dp">Mar 30–Apr 1 · Las Vegas</span></div>
+    <div class="emeta"><div class="emi">📍 Mandalay Bay, Las Vegas, NV</div><div class="emi">👥 3,000+ · 50,000+ meetings engine</div><div class="emi">🤝 Pure networking format</div></div>
+    <div class="ect"><span class="ctag r">US — Fintech networking</span></div>
+    <div class="edesc">The fintech industry's most meeting-intensive event. Uses a tech-powered platform to generate 50,000+ pre-scheduled 1:1 meetings. Not a content event — it's entirely built for partnerships and lead generation. Banks, credit unions, fintechs, VCs and service providers. (Note: 2026 edition already occurred in March — plan for 2027.)</div>
+    <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
+      <div class="eopp"><span>🤝</span>Attend focused purely on 1:1 meetings — book time with TapTapSend, remittance cos and LATAM-US fintechs</div>
+      <div class="eopp"><span>📅</span>Plan for the 2027 edition — high ROI format for Mural Pay's sales motion</div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
+      <span class="epill ep3">Tier 3 · Track</span>
+      <a class="elink" href="https://fintechmeetup.com" target="_blank">fintechmeetup.com →</a>
+    </div>
+  </div>
+
+  <div class="ecard" data-m="oct" data-tier="3">
+    <div class="estripe es3"></div>
+    <div class="eh"><div class="et">Fintech Summit Americas 2026</div><span class="edb da">Aug · Mexico City (US-facing)</span></div>
+    <div class="emeta"><div class="emi">📍 Mexico City</div><div class="emi">👥 750+ attendees</div><div class="emi">🌎 Americas bridge event</div></div>
+    <div class="ect"><span class="ctag r">Americas</span></div>
+    <div class="edesc">17-year-old reference event for the digital financial economy in Latin America, heavily attended by US-based LATAM executives and firms. Financial infrastructure and AI themes. Bridges US and LATAM fintech communities in one room.</div>
+    <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
+      <div class="eopp"><span>🏗️</span>Participate in infrastructure track — ideal positioning for Mural Pay as stablecoin rails</div>
+      <div class="eopp"><span>🤝</span>Doubles as both a US and LATAM touchpoint for cross-border payment prospects</div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
+      <span class="epill ep3">Tier 3 · Track</span>
+      <a class="elink" href="https://fintechsummitamericas.com" target="_blank">fintechsummitamericas.com →</a>
+    </div>
+  </div>
+
+</div><!-- /usGrid -->
+</div><!-- /container -->
+</div><!-- /us -->
+
 <script>
-var et='all',eco='all',em='all',eco2='all';
+var et='all',eco='all',em='all',eco2='all',eum='all';
 function switchTab(id,btn){
   document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
@@ -606,6 +794,16 @@ function fev(dim,val,btn){
     if(mm&&mc){c.classList.remove('hidden');v++;}else c.classList.add('hidden');
   });
   document.getElementById('evCount').textContent='Showing '+v+' event'+(v!==1?'s':'');
+}
+function fevus(dim,val,btn){
+  eum=val;document.querySelectorAll('#usMonthF .fbtn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  var cards=document.querySelectorAll('#usGrid .ecard'),v=0;
+  cards.forEach(function(c){
+    var mm=eum==='all'||c.dataset.m===eum;
+    if(mm){c.classList.remove('hidden');v++;}else c.classList.add('hidden');
+  });
+  document.getElementById('usCount').textContent='Showing '+v+' event'+(v!==1?'s':'');
 }
 </script>
 </body>
