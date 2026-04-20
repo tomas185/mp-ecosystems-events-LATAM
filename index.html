@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mural Pay — LATAM Fintech Ecosystems & Events 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#F5F0E8;--cream-dark:#EDE7D8;--cream-mid:#E0D9CA;--ink:#1A1A18;--ink-muted:#4A4A42;--ink-light:#8A8A7A;--green:#2D6A4F;--green-l:#52B788;--green-p:#D8F3DC;--amber:#9A6B1A;--amber-p:#FEF3C7;--red:#B91C1C;--blue:#1D4ED8;--blue-p:#DBEAFE;--border:rgba(26,26,24,.1);--sh:0 2px 18px rgba(26,26,24,.07);--sh2:0 6px 32px rgba(26,26,24,.13)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--cream);font-family:'DM Sans',sans-serif;color:var(--ink);font-size:14px;line-height:1.65}
+header{background:var(--ink);padding:46px 48px 34px;position:relative;overflow:hidden}
+header::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 40px,rgba(255,255,255,.012) 40px,rgba(255,255,255,.012) 41px);pointer-events:none}
+.h-tag{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--green-l);border:1px solid rgba(82,183,136,.35);border-radius:100px;padding:4px 12px;margin-bottom:16px}
+.h-dot{width:5px;height:5px;border-radius:50%;background:var(--green-l)}
+header h1{font-family:'Playfair Display',serif;font-size:33px;font-weight:700;color:var(--cream);line-height:1.2;max-width:640px;margin-bottom:8px}
+header h1 em{font-style:italic;color:var(--green-l)}
+header p{color:rgba(245,240,232,.52);font-size:13px;font-weight:300;max-width:520px}
+.h-meta{display:flex;gap:18px;flex-wrap:wrap;margin-top:26px}
+.h-mi{display:flex;align-items:center;gap:6px;font-size:11.5px;color:rgba(245,240,232,.42)}
+.h-mi span{color:rgba(245,240,232,.78);font-weight:500}
+.tabs{display:flex;background:white;border-bottom:2px solid var(--border);padding:0 48px;position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(26,26,24,.05)}
+.tab{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;padding:15px 20px;border:none;background:transparent;color:var(--ink-light);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;transition:color .18s,border-color .18s;white-space:nowrap}
+.tab:hover{color:var(--ink)}
+.tab.active{color:var(--green);border-bottom-color:var(--green);font-weight:600}
+.sec{display:none}.sec.active{display:block}
+.container{max-width:1100px;margin:0 auto;padding:36px 22px 56px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1px;background:var(--cream-mid);border-radius:12px;overflow:hidden;margin-bottom:32px;border:1px solid var(--border)}
+.stat{background:white;padding:18px 20px}
+.stat-n{font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:var(--ink);line-height:1;margin-bottom:3px}
+.stat-n.g{color:var(--green)}.stat-n.a{color:var(--amber)}
+.stat-l{font-size:11px;color:var(--ink-light);line-height:1.4}
+.strategy{background:var(--ink);border-radius:12px;padding:26px 30px;margin-bottom:30px}
+.strategy h3{font-family:'Playfair Display',serif;font-size:17px;color:var(--cream);margin-bottom:16px}
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}
+.sgi{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:13px 15px}
+.sgi-s{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-l);margin-bottom:4px}
+.sgi-t{font-family:'Playfair Display',serif;font-size:13.5px;font-weight:600;color:var(--cream);margin-bottom:4px}
+.sgi-b{font-size:11px;color:rgba(245,240,232,.52);line-height:1.5}
+.sh{margin-bottom:22px}
+.sh-l{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-light);margin-bottom:4px}
+.sh-t{font-family:'Playfair Display',serif;font-size:21px;font-weight:600;color:var(--ink);margin-bottom:3px}
+.sh-s{font-size:12.5px;color:var(--ink-muted)}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.fbtn{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;padding:5px 12px;border-radius:100px;border:1px solid var(--border);background:white;color:var(--ink-muted);cursor:pointer;transition:all .15s}
+.fbtn:hover{border-color:var(--green);color:var(--green)}
+.fbtn.active{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.fbtn.c{background:var(--cream);border-color:transparent}
+.fbtn.c:hover{background:var(--green-p);border-color:var(--green);color:var(--green)}
+.fbtn.c.active{background:var(--green);color:white;border-color:var(--green)}
+.fr{margin-bottom:14px}
+.fr-l{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-light);margin-bottom:5px}
+.rm{font-size:11px;color:var(--ink-light);margin-bottom:16px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:13px}
+.card{background:white;border-radius:12px;border:1px solid var(--border);padding:19px 21px;transition:box-shadow .2s,transform .18s;position:relative}
+.card:hover{box-shadow:var(--sh2);transform:translateY(-2px)}
+.card.hidden{display:none}
+.c-top{display:flex;align-items:flex-start;gap:11px;margin-bottom:10px}
+.c-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.c-info{flex:1;min-width:0}
+.c-name{font-family:'Playfair Display',serif;font-size:15px;font-weight:600;color:var(--ink);line-height:1.25}
+.c-type{font-size:9px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;padding:3px 7px;border-radius:100px;white-space:nowrap;flex-shrink:0}
+.ta{background:#E6F4EE;color:#1B6B4A}.tm{background:#EEF2FF;color:#3730A3}.tc{background:#FCE7F3;color:#9D174D}.tl{background:#F0FDF4;color:#166534}
+.ctags{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:9px}
+.ctag{font-size:10px;font-weight:500;padding:2px 6px;border-radius:4px;background:var(--cream-dark);color:var(--ink-muted)}
+.ctag.r{background:var(--green-p);color:var(--green)}
+.cdesc{font-size:12px;color:var(--ink-muted);line-height:1.58;margin-bottom:12px}
+.cact{border-top:1px solid var(--border);padding-top:10px}
+.cal{font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-light);margin-bottom:6px}
+.cai{display:flex;align-items:flex-start;gap:7px;margin-bottom:4px;font-size:11.5px;color:var(--ink-muted);line-height:1.45}
+.cad{width:5px;height:5px;border-radius:50%;margin-top:5px;flex-shrink:0}
+.cad.pa{background:var(--green)}.cad.co{background:var(--blue)}.cad.ev{background:var(--amber)}.cad.so{background:#9D174D}.cad.sp{background:var(--red)}
+.clink{display:inline-flex;align-items:center;gap:4px;font-size:10.5px;font-weight:500;color:var(--green);text-decoration:none;margin-top:7px}
+.clink:hover{text-decoration:underline}
+.badge{position:absolute;top:-1px;right:14px;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:0 0 6px 6px}
+.b1{background:var(--ink);color:var(--cream)}.b2{background:var(--green);color:white}
+.ecards{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:12px}
+.ecard{background:white;border-radius:12px;border:1px solid var(--border);padding:17px 19px;transition:box-shadow .2s,transform .18s;position:relative;overflow:hidden}
+.ecard:hover{box-shadow:var(--sh2);transform:translateY(-2px)}
+.ecard.hidden{display:none}
+.estripe{position:absolute;top:0;left:0;right:0;height:3px}
+.es1{background:var(--green)}.es2{background:var(--amber)}.es3{background:#93C5FD}
+.eh{display:flex;align-items:flex-start;justify-content:space-between;gap:9px;margin-bottom:9px;margin-top:5px}
+.et{font-family:'Playfair Display',serif;font-size:14.5px;font-weight:600;color:var(--ink);line-height:1.25}
+.edb{font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:5px;white-space:nowrap;flex-shrink:0}
+.dm{background:#D1FAE5;color:#065F46}.dj{background:#DBEAFE;color:#1D4ED8}.da{background:#FCE7F3;color:#9D174D}.ds{background:#EDE9FE;color:#5B21B6}.dp{background:var(--cream-dark);color:var(--ink-light)}
+.emeta{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.emi{display:flex;align-items:center;gap:4px;font-size:11px;color:var(--ink-light)}
+.ect{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:9px}
+.edesc{font-size:12px;color:var(--ink-muted);line-height:1.55;margin-bottom:11px}
+.eact{border-top:1px solid var(--border);padding-top:9px}
+.eopp{display:flex;gap:6px;margin-bottom:4px;font-size:11.5px;color:var(--ink-muted);line-height:1.4}
+.epill{font-size:9px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:2px 8px;border-radius:3px}
+.ep1{background:var(--ink);color:var(--cream)}.ep2{background:var(--green);color:white}.ep3{background:var(--cream-mid);color:var(--ink-muted)}
+.elink{font-size:10.5px;font-weight:500;color:var(--green);text-decoration:none;display:inline-flex;align-items:center;gap:3px;margin-top:6px}
+.elink:hover{text-decoration:underline}
+.tleg{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:18px;align-items:center}
+.tli{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--ink-muted)}
+.tlb{width:18px;height:3px;border-radius:2px}
+.efbox{background:white;border-radius:10px;border:1px solid var(--border);padding:15px 17px;margin-bottom:22px}
+.note{background:white;border:1px solid var(--border);border-left:3px solid var(--green);border-radius:0 10px 10px 0;padding:15px 18px;margin-top:22px;font-size:12px;color:var(--ink-muted);line-height:1.6}
+@media(max-width:640px){header{padding:26px 18px}header h1{font-size:25px}.tabs{padding:0 14px;overflow-x:auto}.container{padding:24px 13px 44px}.stats{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="h-tag"><div class="h-dot"></div>Ecosystem Intelligence · Mural Pay</div>
+  <h1>LATAM Fintech<br><em>Ecosystems &amp; Events</em> 2026</h1>
+  <p>Trade associations, communities, media outlets and events for building an inbound demand strategy across 8 markets.</p>
+  <div class="h-meta">
+    <div class="h-mi">🌎 <span>8 markets</span></div>
+    <div class="h-mi">🏛️ <span>25+ organizations</span></div>
+    <div class="h-mi">📅 <span>11 events Apr–Sep 2026</span></div>
+    <div class="h-mi">🎯 <span>ICP: Fintech companies</span></div>
+    <div class="h-mi">📌 <span>Updated April 2026</span></div>
+  </div>
+</header>
+
+<div class="tabs">
+  <button class="tab active" onclick="switchTab('eco',this)">🏛️ Ecosystems</button>
+  <button class="tab" onclick="switchTab('ev',this)">📅 Events 2026</button>
+</div>
+
+<!-- ═══ ECOSYSTEMS ═══ -->
+<div id="tab-eco" class="sec active">
+<div class="container">
+
+<div class="stats">
+  <div class="stat"><div class="stat-n g">3,069</div><div class="stat-l">Active fintechs in LATAM &amp; the Caribbean (2023)</div></div>
+  <div class="stat"><div class="stat-n">+340%</div><div class="stat-l">Ecosystem growth 2017–2023</div></div>
+  <div class="stat"><div class="stat-n a">57%</div><div class="stat-l">Of regional startup VC went to Fintech in 2024</div></div>
+  <div class="stat"><div class="stat-n">8</div><div class="stat-l">National trade associations in our target markets</div></div>
+  <div class="stat"><div class="stat-n g">25+</div><div class="stat-l">Organizations mapped with partnership opportunity</div></div>
+</div>
+
+<div class="strategy">
+  <h3>Strategic engagement framework</h3>
+  <div class="sg">
+    <div class="sgi"><div class="sgi-s">Phase 1 · Presence</div><div class="sgi-t">Join the trade associations</div><div class="sgi-b">FinteChile, Colombia Fintech, FinTech México, Cámara Argentina. Membership grants access to directories, newsletters and exclusive events.</div></div>
+    <div class="sgi"><div class="sgi-s">Phase 2 · Content</div><div class="sgi-t">Activate Latam Fintech Hub</div><div class="sgi-b">Contract influence marketing with Edwin Zácipa. 40K+ makers, weekly newsletter, active Slack. Maximum organic regional reach.</div></div>
+    <div class="sgi"><div class="sgi-s">Phase 3 · Events</div><div class="sgi-t">Sponsor 3 Tier-1 events</div><div class="sgi-b">Chile Fintech Forum (May), Paytech Conf (May), FINNOSUMMIT (Sep). Physical presence in front of the highest ICP concentration of the year.</div></div>
+    <div class="sgi"><div class="sgi-s">Phase 4 · Authority</div><div class="sgi-t">Thought leadership</div><div class="sgi-b">Publish in iupana and LFH on stablecoins + B2B payments. Propose panels at Finnosummit and LFM as speakers.</div></div>
+  </div>
+</div>
+
+<div class="sh">
+  <div class="sh-l">Ecosystem directory</div>
+  <div class="sh-t">Key organizations by type and market</div>
+  <div class="sh-s">Filter to prioritize your engagement strategy. Cards with a "High Priority" badge are immediate action items.</div>
+</div>
+
+<div class="fr"><div class="fr-l">Type</div>
+  <div class="filters" id="typeF">
+    <button class="fbtn active" onclick="fe('t','all',this)">All</button>
+    <button class="fbtn" onclick="fe('t','a',this)">🏛️ Associations</button>
+    <button class="fbtn" onclick="fe('t','m',this)">📰 Media</button>
+    <button class="fbtn" onclick="fe('t','c',this)">👥 Communities</button>
+    <button class="fbtn" onclick="fe('t','l',this)">🌐 Multilaterals</button>
+  </div>
+</div>
+<div class="fr"><div class="fr-l">Market</div>
+  <div class="filters" id="countryF">
+    <button class="fbtn c active" onclick="fe('co','all',this)">All</button>
+    <button class="fbtn c" onclick="fe('co','MX',this)">🇲🇽 MX</button>
+    <button class="fbtn c" onclick="fe('co','CO',this)">🇨🇴 CO</button>
+    <button class="fbtn c" onclick="fe('co','BR',this)">🇧🇷 BR</button>
+    <button class="fbtn c" onclick="fe('co','PE',this)">🇵🇪 PE</button>
+    <button class="fbtn c" onclick="fe('co','AR',this)">🇦🇷 AR</button>
+    <button class="fbtn c" onclick="fe('co','CL',this)">🇨🇱 CL</button>
+    <button class="fbtn c" onclick="fe('co','UY',this)">🇺🇾 UY</button>
+    <button class="fbtn c" onclick="fe('co','BO',this)">🇧🇴 BO</button>
+    <button class="fbtn c" onclick="fe('co','LATAM',this)">🌎 Regional</button>
+  </div>
+</div>
+<div class="rm" id="ecoCount">Showing 13 organizations</div>
+
+<div class="cards" id="ecoGrid">
+
+  <div class="card" data-t="c" data-co="LATAM CO MX BR AR CL PE">
+    <div class="badge b1">High Priority</div>
+    <div class="c-top"><div class="c-icon" style="background:#FCE7F3">🌎</div><div class="c-info"><div class="c-name">Latam Fintech Hub</div></div><span class="c-type tc">Community</span></div>
+    <div class="ctags"><span class="ctag r">Regional LATAM</span><span class="ctag">CO</span><span class="ctag">MX</span><span class="ctag">BR</span></div>
+    <div class="cdesc">LATAM's most active fintech community with <strong>40,000+ makers</strong>. Led by Edwin Zácipa, the region's top fintech influencer. Weekly newsletter "The Blueprint," active Slack, WhatsApp channel, premium reports and a <strong>branded content &amp; influence marketing service</strong> for tech vendors. Audience concentrated in CO, MX and BR — exactly Mural Pay's ICP.</div>
+    <div class="cact"><div class="cal">Recommended actions</div>
+      <div class="cai"><div class="cad pa"></div>Contract influence marketing service — branded content + distribution across newsletter and social</div>
+      <div class="cai"><div class="cad ev"></div>Sponsor Paytech Conf 2026 (Hub's flagship event, Bogotá, May 29)</div>
+      <div class="cai"><div class="cad co"></div>Publish articles on stablecoins in B2B cross-border payments on their editorial platform</div>
+      <a class="clink" href="https://latamfintech.co" target="_blank">latamfintech.co →</a>
+    </div>
+  </div>
+
+  <div class="card" data-t="m" data-co="LATAM MX CO BR CL PE AR">
+    <div class="badge b1">High Priority</div>
+    <div class="c-top"><div class="c-icon" style="background:#EEF2FF">📰</div><div class="c-info"><div class="c-name">iupana</div></div><span class="c-type tm">Media</span></div>
+    <div class="ctags"><span class="ctag r">Regional LATAM</span></div>
+    <div class="cdesc">The reference media outlet for digital banking and fintech leaders across LATAM. Investigative journalism, newsletter, WhatsApp channel, exclusive reports and proprietary events (iupanaDay). Their audience is precisely Mural Pay's ICP: C-level executives at fintechs, banks and payments companies across all target markets.</div>
+    <div class="cact"><div class="cal">Recommended actions</div>
+      <div class="cai"><div class="cad co"></div>Pitch an op-ed or interview on stablecoin infrastructure for B2B payments in LATAM</div>
+      <div class="cai"><div class="cad sp"></div>Sponsor iupanaDay Lima (May 7) — 150 senior leaders, intimate premium format</div>
+      <div class="cai"><div class="cad pa"></div>Explore newsletter sponsorship and strategic summits in MX, CO, PA, CL</div>
+      <a class="clink" href="https://iupana.com" target="_blank">iupana.com →</a>
+    </div>
+  </div>
+
+  <div class="card" data-t="a" data-co="CL LATAM">
+    <div class="badge b1">High Priority</div>
+    <div class="c-top"><div class="c-icon" style="background:#E6F4EE">🇨🇱</div><div class="c-info"><div class="c-name">FinteChile</div></div><span class="c-type ta">Association</span></div>
+    <div class="ctags"><span class="ctag">CL</span><span class="ctag r">Regional reference</span></div>
+    <div class="cdesc">Chile's most consolidated fintech trade association. Organizes the Chile Fintech Forum (3,000+ attendees, LATAM reference), has a Women in Fintech chapter and represents CL in FIA. Executive Director: Ángel Sierra. <strong>Active strategic partnership with Anthropic Chile</strong> — a privileged entry point for Mural Pay.</div>
+    <div class="cact"><div class="cal">Recommended actions</div>
+      <div class="cai"><div class="cad pa"></div>Join as a Fintech Partner — access to directory, newsletter and exclusive events</div>
+      <div class="cai"><div class="cad sp"></div>Sponsor Chile Fintech Forum 2026 (May 6–7, Espacio Riesco, Santiago)</div>
+      <div class="cai"><div class="cad ev"></div>Propose speaker/panel on LATAM-US cross-border payments using stablecoins</div>
+      <a class="clink" href="https://fintechile.org" target="_blank">fintechile.org →</a>
+    </div>
+  </div>
+
+  <div class="card" data-t="a" data-co="CO LATAM">
+    <div class="badge b1">High Priority</div>
+    <div class="c-top"><div class="c-icon" style="background:#E6F4EE">🇨🇴</div><div class="c-info"><div class="c-name">Colombia Fintech</div></div><span class="c-type ta">Association</span></div>
+    <div class="ctags"><span class="ctag">CO</span></div>
+    <div class="cdesc">LATAM's largest trade association: <strong>365+ member companies</strong> (69% fintechs). Organizes the Latam Fintech Market (the region's flagship event), has a Women Colombia Fintech chapter, its own podcast and an active newsletter. 8+ years of history. The primary reference for regulators and the ecosystem.</div>
+    <div class="cact"><div class="cal">Recommended actions</div>
+      <div class="cai"><div class="cad pa"></div>Join as a member company — requirements: 6+ months of operations, active website</div>
+      <div class="cai"><div class="cad sp"></div>Sponsor Latam Fintech Market 2026 (Sep, Barranquilla) — Colombia's most important event</div>
+      <div class="cai"><div class="cad co"></div>Publish CO-US cross-border payment use cases on their editorial platform</div>
+      <a class="clink" href="https://colombiafintech.co" target="_blank">colombiafintech.co →</a>
+    </div>
+  </div>
+
+  <div class="card" data-t="a" data-co="MX LATAM">
+    <div class="badge b1">High Priority</div>
+    <div class="c-top"><div class="c-icon" style="background:#E6F4EE">🇲🇽</div><div class="c-info"><div class="c-name">FinTech México</div></div><span class="c-type ta">Association</span></div>
+    <div class="ctags"><span class="ctag">MX</span><span class="ctag r">First LATAM association</span></div>
+    <div class="cdesc">LATAM's first fintech trade association (founded 2015). <strong>180+ affiliated companies</strong>, 9 active verticals, 1,000+ fintech initiatives in Mexico. Organizes the FinTech México Festival (3,000+ attendees) and the FTMX Week. General Director: Sebastián De Lara. Official interlocutor before CNBV and SHCP.</div>
+    <div class="cact"><div class="cal">Recommended actions</div>
+      <div class="cai"><div class="cad pa"></div>Join — natural vertical: cross-border payments and remittances (MX ecosystem's #1 segment)</div>
+      <div class="cai"><div class="cad ev"></div>Participate in FTMX Week 2026 and propose a talk on MX-US corridors</div>
+      <div class="cai"><div class="cad co"></div>Publish research on MX-US corridors through their studies and webinar platform</div>
+      <a class="clink" href="https://fintechmexico.org" target="_blank">fintechmexico.org →</a>
+    </div>
+  </div>
+
+  <div class="card" data-t="a" data-co="AR LATAM">
+    <div class="badge b2">Medium Priority</div>
+    <div class="c-top"><div class="c-icon" style="background:#E6F4EE">🇦🇷</div><div class="c-info"><div class="c-name">Cámara Argentina Fintech</div></div><span class="c-type ta">Association</span></div>
+    <div class="ctags"><span class="ctag">AR</span></div>
+    <div class="cdesc">The representative trade body for Argentina's fintech ecosystem (700+ active companies). Organizes the annual Argentina Fintech Forum and <strong>international commercial missions</strong> (including a mission to FINNOSUMMIT México 2026). High activity in a market with strong stablecoin adoption driven by monetary volatility.</div>
+    <div class="cact"><div class="cal">Recommended actions</div>
+      <div class="cai"><div class="cad sp"></div>Sponsor Argentina Fintech Forum 2026 (~Oct) — market with real demand for AR-US corridors</div>
+      <div class="cai"><div class="cad ev"></div>Join their commercial mission to FINNOSUMMIT 2026 (Sep, CDMX)</div>
+      <a class="clink" href="https://camarafintech.org" target="_blank">camarafintech.org →</a>
+    </div>
+  </div>
+
+  <div class="card" data-t="a" data-co="PE BO LATAM">
+    <div class="badge b2">Medium Priority</div>
+    <div class="c-top"><div class="c-icon" style="background:#E6F4EE">🇵🇪</div><div class="c-info"><div class="c-name">FinTech Perú</div></div><span class="c-type ta">Association</span></div>
+    <div class="ctags"><span class="ctag">PE</span><span class="ctag">BO</span></div>
+    <div class="cdesc">Peru's official trade association, founded 2017. 190+ Peruvian fintechs and 85 foreign entities. <strong>Currently chairs Fintech Iberoamérica.</strong> Organizes Perú Fintech Forum and Perú Crypto &amp; Digital Assets. Bolivia has no formal association — Peru is the natural entry point for the Bolivia-US corridor.</div>
+    <div class="cact"><div class="cal">Recommended actions</div>
+      <div class="cai"><div class="cad pa"></div>Join — Peru-US corridor via stablecoins is a direct use case for Peruvian fintechs</div>
+      <div class="cai"><div class="cad sp"></div>Sponsor Perú Fintech Forum 2026 (date TBC)</div>
+      <div class="cai"><div class="cad ev"></div>Propose speaker slot at crypto regulation and payments forums — hot topics in PE</div>
+      <a class="clink" href="https://fintechperu.com" target="_blank">fintechperu.com →</a>
+    </div>
+  </div>
+
+  <div class="card" data-t="a" data-co="UY LATAM">
+    <div class="c-top"><div class="c-icon" style="background:#E6F4EE">🇺🇾</div><div class="c-info"><div class="c-name">Cámara Uruguaya de FinTech</div></div><span class="c-type ta">Association</span></div>
+    <div class="ctags"><span class="ctag">UY</span></div>
+    <div class="cdesc">Founded in 2017, a founding member of Fintech Iberoamérica. Small but sophisticated ecosystem: dLocal, OCA Blue, Prex and several regional infrastructure fintechs operate from Montevideo. Organizes the Montevideo Fintech Forum.</div>
+    <div class="cact"><div class="cal">Recommended actions</div>
+      <div class="cai"><div class="cad pa"></div>Reach out for membership or Montevideo Fintech Forum sponsorship</div>
+      <div class="cai"><div class="cad co"></div>Publish in their newsletter on stablecoins and UY regulation for regional fintechs</div>
+    </div>
+  </div>
+
+  <div class="card" data-t="a" data-co="BR LATAM">
+    <div class="c-top"><div class="c-icon" style="background:#E6F4EE">🇧🇷</div><div class="c-info"><div class="c-name">ABFintechs</div></div><span class="c-type ta">Association</span></div>
+    <div class="ctags"><span class="ctag">BR</span><span class="ctag r">Largest LATAM ecosystem</span></div>
+    <div class="cdesc">Brazil's official fintech trade body, representing the region's largest ecosystem (24% of LATAM total, 700+ fintechs). Brazil has Pix but lacks mature stablecoin infrastructure for international corridors — a direct opportunity for Mural Pay in B2B.</div>
+    <div class="cact"><div class="cal">Recommended actions</div>
+      <div class="cai"><div class="cad pa"></div>Connect through FintechLAC Forum and Fintech Iberoamérica</div>
+      <div class="cai"><div class="cad ev"></div>Explore sponsoring Fintouch (series of in-person events across Brazilian cities)</div>
+      <div class="cai"><div class="cad co"></div>Publish on BR-US corridor via stablecoins in local media (Finsiders BR, Exame)</div>
+    </div>
+  </div>
+
+  <div class="card" data-t="m" data-co="LATAM MX CO BR CL AR PE">
+    <div class="badge b2">Medium Priority</div>
+    <div class="c-top"><div class="c-icon" style="background:#EEF2FF">📊</div><div class="c-info"><div class="c-name">Finnovista / Finnosummit</div></div><span class="c-type tm">Media &amp; Events</span></div>
+    <div class="ctags"><span class="ctag r">Regional LATAM</span><span class="ctag">MX</span></div>
+    <div class="cdesc">LATAM's most influential fintech research firm and community. Produces the annual <strong>Fintech Radar</strong> by country (the sector's reference report), organizes FINNOSUMMIT (the region's largest event, Sep CDMX) and FINNOSUMMIT Connect (intimate C-level format). Network of 200+ community partners.</div>
+    <div class="cact"><div class="cal">Recommended actions</div>
+      <div class="cai"><div class="cad sp"></div>Sponsor FINNOSUMMIT 2026 (Sep 23–24, CDMX) — the year's closing flagship event</div>
+      <div class="cai"><div class="cad pa"></div>Become a Community Partner — visibility across 200+ ecosystem stakeholders</div>
+      <div class="cai"><div class="cad co"></div>Contribute to Fintech Radar MX/CO with proprietary cross-border flow data</div>
+      <a class="clink" href="https://finnosummit.com" target="_blank">finnosummit.com →</a>
+    </div>
+  </div>
+
+  <div class="card" data-t="l" data-co="LATAM MX CO BR PE AR CL UY">
+    <div class="badge b2">Medium Priority</div>
+    <div class="c-top"><div class="c-icon" style="background:#F0FDF4">🤝</div><div class="c-info"><div class="c-name">Fintech Iberoamérica (FIA)</div></div><span class="c-type tl">Multilateral</span></div>
+    <div class="ctags"><span class="ctag r">Regional Iberoamérica</span></div>
+    <div class="cdesc">A non-profit alliance bringing together all fintech trade associations across Ibero-America. Members include FinteChile, Colombia Fintech, FinTech México, Cámara Argentina, FinTech Perú, Cámara Uruguaya and more. Organizes the annual FintechLAC Forum. <strong>Single entry point to position Mural Pay before multiple associations at once.</strong></div>
+    <div class="cact"><div class="cal">Recommended actions</div>
+      <div class="cai"><div class="cad pa"></div>Join as an associated company — simultaneous visibility across all member associations</div>
+      <div class="cai"><div class="cad ev"></div>Propose panels at FintechLAC Forum on stablecoin infrastructure for LATAM-US payments</div>
+      <a class="clink" href="https://fintechiberoamerica.org" target="_blank">fintechiberoamerica.org →</a>
+    </div>
+  </div>
+
+  <div class="card" data-t="l" data-co="LATAM MX CO BR PE AR CL">
+    <div class="c-top"><div class="c-icon" style="background:#F0FDF4">🏦</div><div class="c-info"><div class="c-name">IDB Lab / FintechLAC</div></div><span class="c-type tl">Multilateral</span></div>
+    <div class="ctags"><span class="ctag r">Regional LATAM</span></div>
+    <div class="cdesc">The Inter-American Development Bank produces the most cited fintech report in LATAM (with Finnovista) and organizes the annual FintechLAC Forum. Participating in the V Report 2025 call for data is a free way to gain visibility and citations across the sector.</div>
+    <div class="cact"><div class="cal">Recommended actions</div>
+      <div class="cai"><div class="cad co"></div>Participate in the V IDB-Finnovista Report 2025 call for data to get officially mapped</div>
+      <div class="cai"><div class="cad ev"></div>Participate at FintechLAC Forum as sponsor or speaker on payments infrastructure</div>
+    </div>
+  </div>
+
+  <div class="card" data-t="m" data-co="LATAM MX CO BR CL AR PE">
+    <div class="c-top"><div class="c-icon" style="background:#EEF2FF">📡</div><div class="c-info"><div class="c-name">Finsiders / Fintech News América</div></div><span class="c-type tm">Media</span></div>
+    <div class="ctags"><span class="ctag r">Regional LATAM</span><span class="ctag">CO</span><span class="ctag">MX</span><span class="ctag">BR</span></div>
+    <div class="cdesc">Network of specialized digital media outlets: Finsiders covers CO, MX, CL and AR with daily newsletters and high LinkedIn engagement. Fintech News América is the English-language reference. Direct access to founders, investors and fintech executives across the region.</div>
+    <div class="cact"><div class="cal">Recommended actions</div>
+      <div class="cai"><div class="cad co"></div>Send press releases on deal closes, product milestones or company highlights</div>
+      <div class="cai"><div class="cad pa"></div>Explore editorial collaboration with Finsiders Colombia on cross-border payment coverage</div>
+    </div>
+  </div>
+
+</div><!-- /ecoGrid -->
+</div><!-- /container -->
+</div><!-- /eco -->
+
+<!-- ═══ EVENTS ═══ -->
+<div id="tab-ev" class="sec">
+<div class="container">
+
+<div class="stats">
+  <div class="stat"><div class="stat-n g">11</div><div class="stat-l">Events mapped Apr–Sep 2026</div></div>
+  <div class="stat"><div class="stat-n">3</div><div class="stat-l">Tier-1 events — highest ICP concentration</div></div>
+  <div class="stat"><div class="stat-n a">40K+</div><div class="stat-l">Combined potential attendees in the period</div></div>
+  <div class="stat"><div class="stat-n g">6</div><div class="stat-l">Countries with a relevant event in the period</div></div>
+</div>
+
+<div class="tleg">
+  <span style="font-size:10.5px;font-weight:600;color:var(--ink-light);text-transform:uppercase;letter-spacing:.06em">Relevance:</span>
+  <div class="tli"><div class="tlb" style="background:var(--green)"></div>Tier 1 — Must attend</div>
+  <div class="tli"><div class="tlb" style="background:var(--amber)"></div>Tier 2 — High priority</div>
+  <div class="tli"><div class="tlb" style="background:#93C5FD"></div>Tier 3 — Track &amp; follow</div>
+</div>
+
+<div class="efbox">
+  <div class="fr"><div class="fr-l">Month</div>
+    <div class="filters" id="monthF">
+      <button class="fbtn active" onclick="fev('m','all',this)">All</button>
+      <button class="fbtn" onclick="fev('m','may',this)">May</button>
+      <button class="fbtn" onclick="fev('m','jun',this)">June</button>
+      <button class="fbtn" onclick="fev('m','aug',this)">August</button>
+      <button class="fbtn" onclick="fev('m','sep',this)">September</button>
+      <button class="fbtn" onclick="fev('m','oct',this)">October</button>
+    </div>
+  </div>
+  <div class="fr" style="margin-bottom:0"><div class="fr-l">Market</div>
+    <div class="filters" id="evCF">
+      <button class="fbtn c active" onclick="fev('co','all',this)">All</button>
+      <button class="fbtn c" onclick="fev('co','MX',this)">🇲🇽 MX</button>
+      <button class="fbtn c" onclick="fev('co','CO',this)">🇨🇴 CO</button>
+      <button class="fbtn c" onclick="fev('co','CL',this)">🇨🇱 CL</button>
+      <button class="fbtn c" onclick="fev('co','PE',this)">🇵🇪 PE</button>
+      <button class="fbtn c" onclick="fev('co','AR',this)">🇦🇷 AR</button>
+      <button class="fbtn c" onclick="fev('co','LATAM',this)">🌎 Regional</button>
+    </div>
+  </div>
+</div>
+<div class="rm" id="evCount">Showing 11 events</div>
+
+<div class="ecards" id="evGrid">
+
+  <!-- MAY -->
+  <div class="ecard" data-m="may" data-co="CL LATAM">
+    <div class="estripe es1"></div>
+    <div class="eh"><div class="et">Chile Fintech Forum 2026</div><span class="edb dm">May 6–7 · Santiago</span></div>
+    <div class="emeta"><div class="emi">📍 Espacio Riesco, Santiago, CL</div><div class="emi">👥 3,000+ attendees</div><div class="emi">🏆 Chile's largest fintech event</div></div>
+    <div class="ect"><span class="ctag">CL</span><span class="ctag r">LATAM reference</span></div>
+    <div class="edesc">Chile's largest fintech event and a LATAM regional reference. Organized by FinteChile. Attended by startups, banks, investors, regulators and tech companies. 4th edition — projected as the most global yet. Key themes: AI, Open Finance under the new Fintech Law, digital payments, stablecoins. <strong>Ideal given Tomás is based in Santiago.</strong></div>
+    <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
+      <div class="eopp"><span>🥇</span>Sponsor as Gold/Silver — booth in the Expo Hall and visibility in the agenda. Download brochure at chilefintechforum.com</div>
+      <div class="eopp"><span>🎤</span>Propose speaker: "How LATAM fintechs are using stablecoins for US-LATAM payments"</div>
+      <div class="eopp"><span>🤝</span>Activate FinteChile relationship ahead of the event — existing Anthropic Chile connection helps</div>
+      <div class="eopp"><span>📸</span>Generate intensive LinkedIn and X content both days — high ecosystem engagement during the event</div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
+      <span class="epill ep1">Tier 1 · Must attend</span>
+      <a class="elink" href="https://chilefintechforum.com" target="_blank">chilefintechforum.com →</a>
+    </div>
+  </div>
+
+  <div class="ecard" data-m="may" data-co="PE LATAM">
+    <div class="estripe es1"></div>
+    <div class="eh"><div class="et">iupanaDay 2026</div><span class="edb dm">May 7 · Lima, PE</span></div>
+    <div class="emeta"><div class="emi">📍 Lima, Peru</div><div class="emi">👥 150 C-level leaders</div><div class="emi">🔒 Closed / by invitation</div></div>
+    <div class="ect"><span class="ctag">PE</span><span class="ctag r">Regional LATAM</span></div>
+    <div class="edesc">Exclusive digital banking forum organized by iupana. Second edition (the first was in Bogotá). 150 C-level executives from banks, fintechs and payments companies across LATAM. Themes: data, AI, open payments and quantum computing. Plenary sessions, workshops and curated networking. One of the most selective and high-quality events of the year.</div>
+    <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
+      <div class="eopp"><span>🤝</span>Sponsor — contact Luz Castro (luz@iupana.com). Visibility in front of 150 C-levels who are exactly Mural Pay's ICP</div>
+      <div class="eopp"><span>🎤</span>Propose Tomás as a speaker on cross-border payments or stablecoin infrastructure</div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
+      <span class="epill ep1">Tier 1 · Must attend</span>
+      <a class="elink" href="https://iupana.com" target="_blank">iupana.com →</a>
+    </div>
+  </div>
+
+  <div class="ecard" data-m="may" data-co="CO LATAM">
+    <div class="estripe es1"></div>
+    <div class="eh"><div class="et">Paytech Conf 2026</div><span class="edb dm">May 29 · Bogotá</span></div>
+    <div class="emeta"><div class="emi">📍 Bogotá, Colombia</div><div class="emi">👥 500–800 attendees</div><div class="emi">💳 100% digital payments focus</div></div>
+    <div class="ect"><span class="ctag">CO</span><span class="ctag r">Regional LATAM</span></div>
+    <div class="edesc">LATAM's mega digital payments conference, organized by Latam Fintech Hub (Edwin Zácipa). Third edition. Brings together Nubank, Visa, Mastercard, Revolut, processors, neobanks and remittance fintechs. Expo Hall with 50+ exhibitors, academic agenda and networking. <strong>The most directly relevant event for Mural Pay's positioning in the payments chain.</strong></div>
+    <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
+      <div class="eopp"><span>🥇</span>Sponsor — contact Edwin Zácipa (hola@latamfintech.co). High visibility across the entire LATAM payments chain</div>
+      <div class="eopp"><span>🎤</span>Propose panel: "Stablecoins as B2B payment infrastructure: the LATAM-US case"</div>
+      <div class="eopp"><span>🤝</span>Schedule 1:1 meetings with CO pipeline prospects at the event: Skopa, Wahayi, Verilo, SitesPay</div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
+      <span class="epill ep1">Tier 1 · Must attend</span>
+      <a class="elink" href="https://paytechconf.co" target="_blank">paytechconf.co →</a>
+    </div>
+  </div>
+
+  <div class="ecard" data-m="may" data-co="MX LATAM">
+    <div class="estripe es3"></div>
+    <div class="eh"><div class="et">FTMX Week 2026</div><span class="edb dm">May/Jun · Mexico City</span></div>
+    <div class="emeta"><div class="emi">📍 Mexico City</div><div class="emi">📅 Week of distributed events</div><div class="emi">🏛️ Asociación FinTech México</div></div>
+    <div class="ect"><span class="ctag">MX</span></div>
+    <div class="edesc">A week of decentralized events organized by FinTech México across CDMX, connecting founders, investors, regulators and tech companies. The FinTech México Festival 2026 (Feb 26, 3,000+ attendees) is the flagship event — additional cycles run throughout the year.</div>
+    <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
+      <div class="eopp"><span>🎤</span>Propose a satellite event or talk on stablecoin cross-border payments within the week</div>
+      <div class="eopp"><span>🤝</span>Network with MX pipeline fintechs ahead of FINNOSUMMIT in September</div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
+      <span class="epill ep3">Tier 3 · Track</span>
+      <a class="elink" href="https://fintechmexico.org/eventos" target="_blank">fintechmexico.org →</a>
+    </div>
+  </div>
+
+  <!-- JUNE -->
+  <div class="ecard" data-m="jun" data-co="MX LATAM">
+    <div class="estripe es2"></div>
+    <div class="eh"><div class="et">FINNOSUMMIT Connect 2026</div><span class="edb dj">Jun · Cancún, MX</span></div>
+    <div class="emeta"><div class="emi">📍 Cancún, Mexico</div><div class="emi">👥 200–400 leaders</div><div class="emi">🔒 Exclusive C-level format</div></div>
+    <div class="ect"><span class="ctag">MX</span><span class="ctag r">Regional LATAM</span></div>
+    <div class="edesc">Finnovista's most exclusive event: brings together top C-suite from fintech and financial institutions across LATAM in an intimate, high-level format. Roundtables and curated networking sessions. Ideal for building relationships with CEOs and decision-makers. (Exact date TBC, historically March–June.)</div>
+    <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
+      <div class="eopp"><span>🎯</span>Secure an invitation as speaker or sponsor — contact Finnovista directly</div>
+      <div class="eopp"><span>🤝</span>Intimate format ideal for 1:1 meetings with MX and CO pipeline fintechs</div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
+      <span class="epill ep2">Tier 2 · High priority</span>
+      <a class="elink" href="https://finnosummit.com" target="_blank">finnosummit.com →</a>
+    </div>
+  </div>
+
+  <!-- AUGUST -->
+  <div class="ecard" data-m="aug" data-co="MX LATAM">
+    <div class="estripe es2"></div>
+    <div class="eh"><div class="et">Fintech Summit Americas 2026</div><span class="edb da">Aug · Mexico City</span></div>
+    <div class="emeta"><div class="emi">📍 Mexico City</div><div class="emi">👥 750+ attendees</div><div class="emi">🗓️ 17th edition</div></div>
+    <div class="ect"><span class="ctag">MX</span><span class="ctag r">Regional LATAM</span></div>
+    <div class="edesc">17 years of history. The reference event for the evolution of the digital financial economy in LATAM. 2026 themes: financial infrastructure driving sector growth, and AI in financial services. Expo Hall with 1:1 matchmaking via Swapcard. 750+ in-person and virtual attendees. (Exact date TBC, historically August.)</div>
+    <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
+      <div class="eopp"><span>🏗️</span>Participate in the financial infrastructure track — ideal positioning for Mural Pay as stablecoin "rails"</div>
+      <div class="eopp"><span>🤝</span>Use Swapcard to pre-schedule 1:1 meetings with MX pipeline fintechs</div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
+      <span class="epill ep2">Tier 2 · High priority</span>
+      <a class="elink" href="https://fintechsummitamericas.com" target="_blank">fintechsummitamericas.com →</a>
+    </div>
+  </div>
+
+  <!-- SEPTEMBER -->
+  <div class="ecard" data-m="sep" data-co="MX LATAM">
+    <div class="estripe es1"></div>
+    <div class="eh"><div class="et">FINNOSUMMIT 2026</div><span class="edb ds">Sep 23–24 · Mexico City</span></div>
+    <div class="emeta"><div class="emi">📍 Expo Santa Fe, CDMX</div><div class="emi">👥 3,000+ expected</div><div class="emi">🏆 10th edition · LATAM's largest</div></div>
+    <div class="ect"><span class="ctag">MX</span><span class="ctag r">Regional LATAM</span></div>
+    <div class="edesc">The 10th edition of LATAM's largest fintech event. Theme 2026: convergence of the real economy and finance (retail, health, logistics + fintech). <strong>Stablecoins and payments are central pillars</strong> — Paxos already confirmed as speaker. The Cámara Argentina Fintech is organizing a special commercial mission for this event. The single biggest visibility moment of the year in the region.</div>
+    <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
+      <div class="eopp"><span>🥇</span>Sponsor — this is the H2 closing event. Presence here consolidates the full year's positioning</div>
+      <div class="eopp"><span>🎤</span>Apply to the Content Advisory Board as a speaker — stablecoins + B2B payments already on the agenda</div>
+      <div class="eopp"><span>🤝</span>Leverage the Argentina Commercial Mission to connect with AR fintechs attending the event</div>
+      <div class="eopp"><span>📸</span>Generate intensive social content both days — the highest-visibility moment of the year in LATAM</div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
+      <span class="epill ep1">Tier 1 · Must attend</span>
+      <a class="elink" href="https://finnosummit.com" target="_blank">finnosummit.com →</a>
+    </div>
+  </div>
+
+  <div class="ecard" data-m="sep" data-co="CO LATAM">
+    <div class="estripe es1"></div>
+    <div class="eh"><div class="et">Latam Fintech Market 2026</div><span class="edb ds">Sep · Barranquilla, CO</span></div>
+    <div class="emeta"><div class="emi">📍 Barranquilla, Colombia</div><div class="emi">👥 1,300+ attendees</div><div class="emi">🗓️ 2 days · Market format</div></div>
+    <div class="ect"><span class="ctag">CO</span><span class="ctag r">Regional LATAM</span></div>
+    <div class="edesc">Colombia's most important digital financial technology event and one of LATAM's top conferences. Organized by Colombia Fintech. Two days of academic agenda, commercial matchmaking and networking. In 2025: AI, instant payments (Bre-B) and stablecoins were the main themes. (Exact 2026 date TBC, historically September.)</div>
+    <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
+      <div class="eopp"><span>🥇</span>Sponsor — home event in Mural Pay's most active market. Very convenient given Tomás's presence in the region</div>
+      <div class="eopp"><span>🎤</span>Propose panel on cross-border payment infrastructure CO-US using stablecoins</div>
+      <div class="eopp"><span>🤝</span>Schedule 1:1 meetings with CO pipeline: Skopa, Wahayi, Verilo, SitesPay</div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
+      <span class="epill ep1">Tier 1 · Must attend</span>
+      <a class="elink" href="https://latamfintech.market" target="_blank">latamfintech.market →</a>
+    </div>
+  </div>
+
+  <div class="ecard" data-m="sep" data-co="AR LATAM">
+    <div class="estripe es2"></div>
+    <div class="eh"><div class="et">Argentina Fintech Forum 2026</div><span class="edb ds">Sep/Oct · Buenos Aires</span></div>
+    <div class="emeta"><div class="emi">📍 Buenos Aires, Argentina</div><div class="emi">👥 500+ attendees</div><div class="emi">🗓️ ~7th edition</div></div>
+    <div class="ect"><span class="ctag">AR</span></div>
+    <div class="edesc">The flagship event of Cámara Argentina Fintech. The 6th edition (2024) included the CNV president and brought together the full local ecosystem. The AR market has 700+ fintechs with accelerated stablecoin adoption driven by monetary volatility — genuine demand for AR-US corridors. (Exact 2026 date TBC, historically October.)</div>
+    <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
+      <div class="eopp"><span>🤝</span>Sponsor — market with high stablecoin adoption and urgent need for AR-US corridors</div>
+      <div class="eopp"><span>🎤</span>Propose a panel on stablecoin payments for fintechs operating in high-inflation markets</div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
+      <span class="epill ep2">Tier 2 · High priority</span>
+      <a class="elink" href="https://camarafintech.org" target="_blank">camarafintech.org →</a>
+    </div>
+  </div>
+
+  <div class="ecard" data-m="sep" data-co="AR LATAM">
+    <div class="estripe es3"></div>
+    <div class="eh"><div class="et">CLAB 2026 (FELABAN)</div><span class="edb ds">Sep · Buenos Aires, AR</span></div>
+    <div class="emeta"><div class="emi">📍 Buenos Aires, Argentina</div><div class="emi">👥 1,000+ attendees</div><div class="emi">🏦 Banking + Fintech</div></div>
+    <div class="ect"><span class="ctag">AR</span><span class="ctag r">Regional LATAM</span></div>
+    <div class="edesc">Latin American and Caribbean Banks Congress (FELABAN). Traditional banks and fintechs converge. In 2025, it addressed predictive banking, invisible finance and core system modernization. Relevant for positioning Mural Pay before institutional players and large-scale fintechs seeking cross-border payment solutions.</div>
+    <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
+      <div class="eopp"><span>👀</span>Attend to map potential institutional clients and strategic partnerships</div>
+      <div class="eopp"><span>🤝</span>Use as networking follow-up after FINNOSUMMIT before this event</div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
+      <span class="epill ep3">Tier 3 · Track</span>
+    </div>
+  </div>
+
+  <div class="ecard" data-m="oct" data-co="PE LATAM">
+    <div class="estripe es2"></div>
+    <div class="eh"><div class="et">Perú Fintech Forum 2026</div><span class="edb dp">Oct/Nov · Lima, PE</span></div>
+    <div class="emeta"><div class="emi">📍 Lima, Peru</div><div class="emi">👥 400–600 attendees</div><div class="emi">🏛️ Organized by FinTech Perú</div></div>
+    <div class="ect"><span class="ctag">PE</span><span class="ctag">BO</span></div>
+    <div class="edesc">The annual event of the FinTech Perú trade association. Brings together Peruvian and regional fintechs, regulators (SBS, BCRP) and investors. In 2024, Perú Crypto &amp; Digital Assets was also held alongside it, reflecting growing interest in digital assets. Natural entry point for the Bolivian market, which has no dedicated local event. (Exact date TBC.)</div>
+    <div class="eact"><div class="cal">Opportunities for Mural Pay</div>
+      <div class="eopp"><span>🤝</span>Sponsor — position Mural Pay in the Peru/Bolivia-US stablecoin corridor</div>
+      <div class="eopp"><span>🎤</span>Speak on international payment infrastructure for fintechs in emerging markets</div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px">
+      <span class="epill ep2">Tier 2 · High priority</span>
+      <a class="elink" href="https://fintechperu.com" target="_blank">fintechperu.com →</a>
+    </div>
+  </div>
+
+</div><!-- /evGrid -->
+
+<div class="note">
+  <strong>📌 Bolivia &amp; Uruguay — strategic note</strong><br>
+  Bolivia has no consolidated local fintech event. Recommended approach: activate through the Perú Fintech Forum and closely follow Vita Wallet (the first international financial institution authorized to operate crypto in Bolivia). Uruguay has the <strong>Montevideo Fintech Forum</strong> (Cámara Uruguaya de FinTech, variable date) — relevant since dLocal, OCA Blue and several regional infrastructure fintechs operate from Montevideo. Both markets are best approached as an extension of their neighboring markets (Peru and Argentina respectively) rather than independently at this stage.
+</div>
+
+</div><!-- /container -->
+</div><!-- /ev -->
+
+<script>
+var et='all',eco='all',em='all',eco2='all';
+function switchTab(id,btn){
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('tab-'+id).classList.add('active');
+  btn.classList.add('active');
+}
+function fe(dim,val,btn){
+  if(dim==='t'){et=val;document.querySelectorAll('#typeF .fbtn').forEach(b=>b.classList.remove('active'));}
+  else{eco=val;document.querySelectorAll('#countryF .fbtn').forEach(b=>b.classList.remove('active'));}
+  btn.classList.add('active');
+  var cards=document.querySelectorAll('#ecoGrid .card'),v=0;
+  cards.forEach(function(c){
+    var mt=et==='all'||c.dataset.t===et,mc=eco==='all'||c.dataset.co.includes(eco);
+    if(mt&&mc){c.classList.remove('hidden');v++;}else c.classList.add('hidden');
+  });
+  document.getElementById('ecoCount').textContent='Showing '+v+' organization'+(v!==1?'s':'');
+}
+function fev(dim,val,btn){
+  if(dim==='m'){em=val;document.querySelectorAll('#monthF .fbtn').forEach(b=>b.classList.remove('active'));}
+  else{eco2=val;document.querySelectorAll('#evCF .fbtn').forEach(b=>b.classList.remove('active'));}
+  btn.classList.add('active');
+  var cards=document.querySelectorAll('#evGrid .ecard'),v=0;
+  cards.forEach(function(c){
+    var mm=em==='all'||c.dataset.m===em,mc=eco2==='all'||c.dataset.co.includes(eco2);
+    if(mm&&mc){c.classList.remove('hidden');v++;}else c.classList.add('hidden');
+  });
+  document.getElementById('evCount').textContent='Showing '+v+' event'+(v!==1?'s':'');
+}
+</script>
+</body>
+</html>
